@@ -1,0 +1,403 @@
+/*
+let nome = "andy";
+let sobrenome = "machado";
+let idade = 78;
+const numCliente = 656598;
+let valorEmprestimo = 10000;
+let taxaDejuros = 0.41;
+let numAnos = 8;
+let ehBomPagador = false;
+
+//let juros = valorEmprestimo * taxaDejuros * numAnos;
+//let montante = valorEmprestimo + juros;
+//console.log("Valor do montante: " + montante);
+
+
+// Primeiras funções if/else
+//if(ehBomPagador){
+  //  console.log("O cliente " + nome + " é um bom pagador.");
+//}else{
+    //    console.log("O cliente " + nome + " não é um bom pagador");
+    //}
+// operador ternário
+// console.log("O cliente " + nome +(ehBomPagador ? "é bom pagador" : "não é bom pagador"));
+
+// else if - taxa de juros
+/**
+18-25 anos > 9%
+26-35 anos > 8%
+36-50 anos > 7%
+51 + > 6%
+ */
+/*
+
+if (idade >= 18 && idade <= 25){
+    taxaDejuros = 0.09;
+}else if (idade >= 26 && idade <= 35){
+    taxaDejuros = 0.08;
+}else if(idade >= 36 && idade <= 50){
+    taxaDejuros = 0.07;
+}else{
+    taxaDejuros = 0.06;
+}
+
+
+
+/* for(let cont = 0; cont < 3; cont++){
+  valorEmprestimo = parseInt(prompt("Digite o valor do empréstimo :")); 
+  numAnos = parseInt(prompt("Digite o numero de anos : "));
+  juros = valorEmprestimo * taxaDejuros * numAnos;
+  montante = valorEmprestimo + juros;
+  console.log(montante);
+}
+/* "prompt" para mostrar caixa digitável no navegador
+"parseInt" para transformar string em number 
+*/
+
+
+/* comando while 
+
+valorEmprestimo = 1
+while(valorEmprestimo != 0){
+    valorEmprestimo = parseInt(prompt("Insira o valor do emprestimo"));
+    numAnos = parseInt(prompt("Insira o numero de anos"));
+    juros = valorEmprestimo * taxaDejuros * numAnos;
+    montante = valorEmprestimo + juros;
+    console.log(montante);
+
+}
+
+/* for = valor limite predeterminado
+while = indefinido
+*/
+/* comando dowhile = para ir direto ao término do comando
+do{
+
+    valorEmprestimo = parseInt(prompt("Insira o valor do emprestimo"));
+    numAnos = parseInt(prompt("Insira o numero de anos"));
+    juros = valorEmprestimo * taxaDejuros * numAnos;
+    montante = valorEmprestimo + juros;
+    console.log(montante);
+} while(valorEmprestimo != 0);
+*/
+
+/* comando break
+while(true){
+    valorEmprestimo = parseInt(prompt("Insira o valor do emprestimo"));
+    if (valorEmprestimo ===0){
+        break;
+    }
+    numAnos = parseInt(prompt("Insira o numero de anos"));
+    juros = valorEmprestimo * taxaDejuros * numAnos;
+    montante = valorEmprestimo + juros;
+    console.log(montante);
+} */
+//primeiras funções = declaração de funções
+/*
+
+let nome;
+let sobrenome;
+let idade;
+let valorEmprestimo;
+let taxaDejuros;
+let numAnos;
+let ehBomPagador;
+
+function cadastraCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, numAnosCliente, ehBomPagadorCliente){
+    nome = nomeCliente;
+    sobrenome = sobrenomeCliente;
+    idade = idadeCliente;
+    valorEmprestimo = valorEmprestimoCliente;
+    numAnos = numAnosCliente;
+    ehBomPagador = ehBomPagadorCliente;
+    taxaDejuros = defineTaxa(idadeCliente)
+
+}
+
+function defineTaxa (idadeCliente){
+    if (idade >= 18 && idade <= 25){
+        return 0.09;
+    }else if (idade >= 26 && idade <= 35){
+        return 0.08;
+    }else if(idade >= 36 && idade <= 50){
+        return 0.07;
+    }else{
+        return 0.06;
+    }
+}
+
+cadastraCliente("Andy", "Machado", 27, 150000, 2 , true)
+console.log(nome);
+console.log(sobrenome);
+console.log(taxaDejuros);
+
+cadastraCliente("Fulano", "De tal", 25, 200000, 5 , false)
+console.log(nome);
+console.log(sobrenome);
+console.log(taxaDejuros);
+
+*/
+/* Array
+
+let nome;
+let sobrenome;
+let idade;
+let valorEmprestimo;
+let taxaDejuros;
+let numAnos;
+let ehBomPagador;
+let avalistas;
+
+function cadastraCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, numAnosCliente, ehBomPagadorCliente = false, avalistasCliente){
+    nome = nomeCliente;
+    sobrenome = sobrenomeCliente;
+    idade = idadeCliente;
+    valorEmprestimo = valorEmprestimoCliente;
+    numAnos = numAnosCliente;
+    ehBomPagador = ehBomPagadorCliente;
+    taxaDejuros = defineTaxa(idadeCliente)
+    avalistas = avalistasCliente;
+
+}
+
+function defineTaxa (idadeCliente){
+    if (idade >= 18 && idade <= 25){
+        return 0.09;
+    }else if (idade >= 26 && idade <= 35){
+        return 0.08;
+    }else if(idade >= 36 && idade <= 50){
+        return 0.07;
+    }else{
+        return 0.06;
+    }
+}
+
+cadastraCliente("Andy", "Machado", 27, 150000, 2 , true, ["Rafael", "Ricardo" , "Pedro"])
+console.log(nome);
+console.log(avalistas);
+console.log(avalistas[0]);
+console.log(avalistas[1]);
+console.log(avalistas[2]);
+*/
+// métodos arrays
+/* let nome;
+let sobrenome;
+let idade;
+let valorEmprestimo;
+let taxaDejuros;
+let numAnos;
+let ehBomPagador;
+let avalistas;
+
+function cadastraCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, numAnosCliente, ehBomPagadorCliente = false, avalistasCliente){
+    nome = nomeCliente;
+    sobrenome = sobrenomeCliente;
+    idade = idadeCliente;
+    valorEmprestimo = valorEmprestimoCliente;
+    numAnos = numAnosCliente;
+    ehBomPagador = ehBomPagadorCliente;
+    taxaDejuros = defineTaxa(idadeCliente)
+    avalistas = avalistasCliente;
+
+}
+
+function defineTaxa (idadeCliente){
+    if (idade >= 18 && idade <= 25){
+        return 0.09;
+    }else if (idade >= 26 && idade <= 35){
+        return 0.08;
+    }else if(idade >= 36 && idade <= 50){
+        return 0.07;
+    }else{
+        return 0.06;
+    }
+}
+
+cadastraCliente("Andy", "Machado", 27, 150000, 2 , true, ["Rafael", "Ricardo" , "Pedro"])
+
+function adicionaAvalista(avalista){
+    avalistas.push(avalista);
+}
+
+function removeAvalista(){
+    avalistas.pop();
+}
+
+function editaAvalista(nomeAvalista, indice){
+    avalistas[indice] = nomeAvalista;
+}
+
+function ordenaAvalista(){
+    return avalistas.sort();    
+}
+//aula forEach
+function exibeAvalistas(){
+    avalistas.forEach((avalista, indice) => {
+        console.log( `O ${indice + 1}º avalista é  ${avalista} `  ); //sintaxe do template string é as crases (`´)
+    });
+}
+
+
+
+adicionaAvalista("Andre")
+adicionaAvalista("José")
+adicionaAvalista("Marcos")
+//console.log(avalistas);
+removeAvalista();
+removeAvalista();
+//console.log(avalistas);
+editaAvalista("Andy Machado", 0);
+//console.log(avalistas[0]);
+//console.log(ordenaAvalista());
+
+exibeAvalistas();
+
+
+const clientes = [["Manuel", 24, true], ["Edval", 24, false], ["Andy", 27, true]];
+
+console.table(clientes);
+
+console.log(clientes[1][0]);
+console.log(clientes[1][1]);
+
+clientes.push(["Bruno", 26,false]); //push para acrescentar
+clientes.pop(); //pop para remover
+console.table(clientes);
+
+
+// Seçao 8 - Objetos
+
+function cadastraCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, numAnosCliente, ehBomPagadorCliente = false, avalistasCliente){
+    cliente = {
+    nome:nomeCliente,
+    sobrenome:sobrenomeCliente,
+    idade:idadeCliente,
+    emprestimo: {
+        valorEmprestimo: valorEmprestimoCliente,
+        numAnos: numAnosCliente,
+        ehBomPagador: ehBomPagadorCliente,
+        taxaDejuros:defineTaxa(idadeCliente),
+        avalistas:avalistasCliente,
+    }
+    
+}
+    return cliente;
+    
+
+
+}
+
+const cliente1 = cadastraCliente("Andy", "Machado", 27, 150000, 2 , true, ["Rafael", "Ricardo" , "Pedro"])
+
+// Métodos
+
+function cadastraCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, numAnosCliente, ehBomPagadorCliente = false, avalistasCliente){
+    cliente = {
+    nome:nomeCliente,
+    sobrenome:sobrenomeCliente,
+    idade:idadeCliente,
+    emprestimo: {
+        valorEmprestimo: valorEmprestimoCliente,
+        numAnos: numAnosCliente,
+        ehBomPagador: ehBomPagadorCliente,
+        taxaDejuros:defineTaxa(idadeCliente),
+        avalistas:avalistasCliente,
+    },
+    adicionaAvalista: function(avalista){
+        this.emprestimo.avalistas.push(avalista);
+    },
+    removeAvalista: function(){
+        this.emprestimo.avalistas.pop();
+    },
+    editaAvalista: function(nomeAvalista, indice){
+        this.emprestimo.avalistas[indice] = nomeAvalista;
+    },
+    ordenaAvalistas: function(){
+        this.emprestimo.avalistas.sort();
+    },
+    exibeAvalistas: function (){
+        this.emprestimo.avalistas.forEach((avalista, indice) =>{
+            console.log(`O ${indice + 1}º avalista é ${avalista}`);
+        });
+    }
+    
+    }
+   
+    return cliente;
+
+    
+}
+    
+function defineTaxa (idadeCliente){
+    if (idade >= 18 && idade <= 25){
+        return 0.09;
+    }else if (idade >= 26 && idade <= 35){
+        return 0.08;
+    }else if(idade >= 36 && idade <= 50){
+        return 0.07;
+    }else{
+        return 0.06;
+    }
+}
+
+const cliente1 = cadastraCliente("Andy", "Machado", 27, 150000, 2 , true, ["Rafael", "Ricardo" , "Pedro"])
+
+cliente1.adicionaAvalista("José");
+cliente1.adicionaAvalista("Melon");
+
+console.log(cliente1.emprestimo.avalistas);
+
+//desestruturando objetos
+const carro = {
+    nome: "Fiesta",
+    marca: "Ford",
+    cor: "Amarelo",
+    ano: 2012,
+    emplacado: true,
+    consumo: 11,
+    caácodadeTanque: 45,
+    motor: {
+        cavalos: 126,
+        cilindradas: 1.6
+    }
+};
+const {moto: {cavalos}} = carro;
+console.log(cavalos); //126
+//casos de uso em desestruturar objetos
+
+const carros = [
+    {nome: "Fiesta", marca:"Ford", cor:"Amarelo"}
+    {nome: "Uno",marca: "Fiat", cor:"Preto"}
+    {nome: "Gol",marca: "VW", cor: "Branco"}
+];
+const nomes = carros.map(({nome}) => nome);
+console.log(nomes); //["fiesta", "uno", "gol"]
+
+
+//tratamento de erros //
+function credenciaisInvalidas(mensagem){
+    this.nome ="Credenciais invalidas";
+    this.mensagem = mensagem;
+}
+
+function adicionaInfLogin(cliente, email, senha){
+    if(email.indexOf("@") !== -1 && senha.length > 5){
+        cliente.login = {
+            email:email,
+            senha:senha
+        }
+        return cliente;
+    }else{
+        throw new credenciaisInvalidas("Os dados são inválidos");
+    }
+}
+
+try{
+    const cliente1 = cadastraCliente("Andy", "Machado", 27, 150000, 2 , true, ["Rafael", "Ricardo" , "Pedro"]);
+    console.log(adicionaInfLogin(cliente1, "andy@email.com", "ed1"));
+}catch(erro){
+    console.log(erro);
+}finally{
+    console.log("Deseja realizar uma nova operação?");
+}
+*/
